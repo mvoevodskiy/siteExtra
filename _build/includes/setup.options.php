@@ -24,11 +24,8 @@ switch ($options[xPDOTransport::PACKAGE_ACTION]) {
                     $cols[$col] = array();
                 }
                 if (!in_array($checkbox, array(
-                        /* 'CKEditor', */
                         'TinyMCE Rich Text Editor',
-                        'tagElementPlugin',
-                        'frontendManager',
-                        'SmushIt',
+                        'frontendManager'
                     ))) {
                     $checked = 'checked';
                 } else {
