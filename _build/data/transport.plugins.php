@@ -18,13 +18,6 @@ $tmp = array(
         'events' => array(
             'OnHandleRequest' => array()
         )
-    ),
-    'convertBase64Images' => array(
-        'file' => 'convertbase64images',
-        'description' => '',
-        'events' => array(
-            'OnDocFormSave' => array()
-        )
     )
 );
 

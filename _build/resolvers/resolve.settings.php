@@ -238,6 +238,48 @@ switch ($options[xPDOTransport::PACKAGE_ACTION]) {
             ), '', true, true);
             $tmp->save();
         }
+
+        if (in_array('pdoTools', $options['install_addons'])) {
+            if (!$tmp = $modx->getObject('modSystemSetting', array('key' => 'pdotools_fenom_modx'))) {
+                $tmp = $modx->newObject('modSystemSetting');
+            }
+            $tmp->fromArray(array(
+                'namespace' => 'pdotools',
+                'area'      => 'pdotools_main',
+                'xtype'     => 'combo-boolean',
+                'value'     => '1',
+                'key'       => 'pdotools_fenom_modx',
+            ), '', true, true);
+            $tmp->save();
+        }
+
+        if (in_array('pdoTools', $options['install_addons'])) {
+            if (!$tmp = $modx->getObject('modSystemSetting', array('key' => 'pdotools_fenom_php'))) {
+                $tmp = $modx->newObject('modSystemSetting');
+            }
+            $tmp->fromArray(array(
+                'namespace' => 'pdotools',
+                'area'      => 'pdotools_main',
+                'xtype'     => 'combo-boolean',
+                'value'     => '1',
+                'key'       => 'pdotools_fenom_php',
+            ), '', true, true);
+            $tmp->save();
+        }
+
+        if (in_array('pdoTools', $options['install_addons'])) {
+            if (!$tmp = $modx->getObject('modSystemSetting', array('key' => 'pdotools_fenom_save_on_errors'))) {
+                $tmp = $modx->newObject('modSystemSetting');
+            }
+            $tmp->fromArray(array(
+                'namespace' => 'pdotools',
+                'area'      => 'pdotools_main',
+                'xtype'     => 'combo-boolean',
+                'value'     => '1',
+                'key'       => 'pdotools_fenom_save_on_errors',
+            ), '', true, true);
+            $tmp->save();
+        }
         
         if (!$tmp = $modx->getObject('modSystemSetting', array('key' => 'locale'))) {
             $tmp = $modx->newObject('modSystemSetting');
